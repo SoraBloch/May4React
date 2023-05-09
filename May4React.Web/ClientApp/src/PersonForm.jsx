@@ -16,7 +16,9 @@ class PersonForm extends React.Component {
                 </div>
                 <div className='col-md-1'>
                     <button onClick={this.props.onAddClick} className='btn btn-dark w-100'>Add</button>
-
+                </div>
+                <div className='col-md-1'>
+                    <button onClick={this.props.onClearClick} className='btn btn-warning w-100'>Clear</button>
                 </div>
             </div>
         );

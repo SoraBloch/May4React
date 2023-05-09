@@ -27,7 +27,9 @@ class PeopleTable extends React.Component {
         copy.push({ firstName: this.state.firstName, lastName: this.state.lastName, age: this.state.age });
         this.setState({ people: copy, firstName: '', lastName: '', age: ''});
     }
-
+    onClearClick = () => {
+        this.setState({people: []})
+    }
    
 
 
@@ -40,7 +42,9 @@ class PeopleTable extends React.Component {
                     onFirstNameTextboxChange={this.onFirstNameTextboxChange}
                     onLastNameTextboxChange={this.onLastNameTextboxChange}
                     onAgeTextboxChange={this.onAgeTextboxChange}
-                    onAddClick={this.onAddClick}/>
+                    onAddClick={this.onAddClick}
+                    onClearClick={this.onClearClick}
+                />         
                 <div className="container mt-5">
                     <div className="table-responsive">
                         <table className="table table-bordered table-striped table-hover">
